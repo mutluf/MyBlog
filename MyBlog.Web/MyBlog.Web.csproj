@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyBlog.Data\MyBlog.Data.csproj" />
+    <ProjectReference Include="..\MyBlog.Service\MyBlog.Service.csproj" />
   </ItemGroup>
 
 </Project>

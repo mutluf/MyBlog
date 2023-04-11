@@ -1,13 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using MyBlog.Data;
 using MyBlog.Data.Context;
+using MyBlog.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddServiceLayerService();
 builder.Services.AddDataLayerService(builder.Configuration);
+
 builder.Services.AddDbContext<MyBlogDbContext>(opt =>opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
