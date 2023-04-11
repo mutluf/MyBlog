@@ -14,6 +14,5 @@ namespace MyBlog.Data.Repositories.Abstaction
         Task<bool> AnyAsync(Expression<Func<T, bool>> method);
         Task<int> CountAsync(Expression<Func<T, bool>> method = null);
 
-        Task SaveAsync();
     }
 }

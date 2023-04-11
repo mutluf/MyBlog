@@ -76,10 +76,6 @@ namespace MyBlog.Data.Repositories.Concretes
             return await query.SingleAsync();
         }
 
-        public async Task SaveAsync()
-        {
-            await context.SaveChangesAsync();
-        }
 
         public async Task<T> UpdateAsync(T model)
         {
