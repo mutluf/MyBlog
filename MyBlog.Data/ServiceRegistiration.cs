@@ -14,7 +14,7 @@ namespace MyBlog.Data
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUnitOfWork,UnitOfWork>();
-            services.AddDbContext<MyBlogDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<MyBlogDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("DefaultConnection")));
 
             return services;
         }
