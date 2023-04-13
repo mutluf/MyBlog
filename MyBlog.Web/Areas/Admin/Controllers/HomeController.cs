@@ -4,19 +4,14 @@ using MyBlog.Service.Abstraction;
 
 namespace MyBlog.Web.Areas.Admin.Controllers
 {
-    [Area("admin")]
+    [Area("Admin")]
     public class HomeController : Controller
     {
-        private readonly IArticleService articleService;
-
-        public HomeController(IArticleService articleService)
+      
+        public IActionResult Index()
         {
-            this.articleService = articleService;
-        }
-        public async Task<IActionResult> Index()
-        {
-            List<Article> articles= await articleService.GetAllArticleAsync();
-            return View(articles);
+           
+            return View();
         }
     }
 }
