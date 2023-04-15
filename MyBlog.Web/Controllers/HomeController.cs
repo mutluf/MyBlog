@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyBlog.Entity.DTOs;
 using MyBlog.Entity.Entities;
 using MyBlog.Service.Abstraction;
 using MyBlog.Web.Models;
@@ -19,7 +20,7 @@ namespace MyBlog.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<Article> articles = await _articleService.GetAllArticleAsync();
+            List<ArticleDto> articles = await _articleService.GetAllArticleAsync();
             return View(articles);
         }
 
